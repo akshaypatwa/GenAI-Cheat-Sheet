@@ -1,7 +1,5 @@
 {
   "name": "GenAI Concepts Cheat Sheet",
   "description": "A visually stunning, interactive infographic displaying core Generative AI concepts using advanced React and Tailwind design. Features Gemini-powered deep dives and analogies.",
-  "requestFramePermissions": [
-    "display-capture"
-  ]
+  "requestFramePermissions": []
 }
