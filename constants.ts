@@ -90,15 +90,5 @@ export const CONCEPTS: Concept[] = [
     category: 'Risk',
     iconName: 'Ghost',
     color: 'red'
-  },
-  {
-    id: 'context-window',
-    title: 'Context Window',
-    shortDefinition: 'The limit on the amount of text (in tokens) the model can consider at one time (input + output).',
-    example: 'Being able to paste a whole book (100k tokens) vs just one chapter.',
-    uses: ['Code Analysis', 'Book Summaries', 'Long History'],
-    category: 'Parameter',
-    iconName: 'Maximize',
-    color: 'sky'
   }
 ];
