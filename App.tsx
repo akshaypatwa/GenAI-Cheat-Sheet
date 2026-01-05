@@ -47,11 +47,21 @@ const App: React.FC = () => {
     // H-SCREEN + OVERFLOW-HIDDEN: Forces single page, no scroll
     <div className="h-screen w-full bg-slate-50 font-sans selection:bg-indigo-500 selection:text-white overflow-hidden flex justify-center items-center relative">
       
-      {/* Background Decor - Animated Blobs - Extremely Reduced Intensity (5%) */}
-      <div className="fixed inset-0 pointer-events-none opacity-5">
-         <div className="absolute top-0 right-0 w-[50vw] h-[50vh] bg-gradient-to-b from-blue-200 to-transparent blur-3xl animate-blob" />
-         <div className="absolute bottom-0 left-0 w-[50vw] h-[50vh] bg-gradient-to-t from-violet-200 to-transparent blur-3xl animate-blob" style={{ animationDelay: '2s' }} />
-         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[40vw] h-[40vw] bg-indigo-100/50 rounded-full blur-3xl animate-pulse-slow" />
+      {/* Background Decor - Noise Texture (Paper Feel) */}
+      <div className="fixed inset-0 pointer-events-none bg-noise opacity-[0.03] z-[1]" />
+
+      {/* Background Decor - Grid Pattern - Visible Technical Grid */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+          <div className="absolute inset-0 bg-tech-pattern opacity-100" />
+          {/* Subtle Vignette Mask - Only fades edges */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,rgba(248,250,252,0.8)_100%)]" />
+      </div>
+
+      {/* Background Decor - Animated Blobs - Colorful & Ambient */}
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-30">
+         <div className="absolute top-[-10%] right-[-10%] w-[50vw] h-[50vh] bg-gradient-to-br from-indigo-300 to-blue-300 blur-[80px] animate-blob" />
+         <div className="absolute bottom-[-10%] left-[-10%] w-[50vw] h-[50vh] bg-gradient-to-tr from-violet-300 to-fuchsia-300 blur-[80px] animate-blob" style={{ animationDelay: '2s' }} />
+         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[40vw] h-[40vw] bg-sky-200/50 rounded-full blur-[100px] animate-pulse-slow" />
       </div>
 
       {/* 
@@ -66,7 +76,7 @@ const App: React.FC = () => {
         <header className="shrink-0 mb-4 text-center animate-fade-in-up flex flex-col justify-center">
             <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 leading-none uppercase flex flex-row justify-center items-baseline gap-4">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-blue-600 to-violet-600 animate-gradient-x drop-shadow-sm">
-                GENAI CHEAT SHEET
+                GENERATIVE AI BLUEPRINT
               </span>
             </h1>
         </header>

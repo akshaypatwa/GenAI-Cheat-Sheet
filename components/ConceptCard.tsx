@@ -123,7 +123,7 @@ export const ConceptCard: React.FC<ConceptCardProps> = ({ concept, onClick, inde
                 </div>
 
                 <div className="flex flex-col justify-center min-w-0 flex-1">
-                   <h3 className={`font-black text-white tracking-tight drop-shadow-lg uppercase leading-none ${concept.title.length > 10 ? 'text-[0.95rem]' : 'text-[1.1rem]'}`}>
+                   <h3 className={`font-black text-white tracking-tight drop-shadow-lg uppercase leading-none ${concept.title.length > 10 ? 'text-lg' : 'text-2xl'}`}>
                       {concept.title}
                    </h3>
                    <div className="h-0.5 w-6 bg-white/50 mt-1.5 rounded-full group-hover:w-full transition-all duration-500" />
@@ -133,7 +133,7 @@ export const ConceptCard: React.FC<ConceptCardProps> = ({ concept, onClick, inde
 
           {/* --- Middle: Definition (Flexible) --- */}
           <div className="px-3 py-1.5 flex flex-col flex-1 relative bg-white z-10 min-h-0 justify-center">
-              <p className="text-[10.5px] text-slate-500 font-medium leading-snug line-clamp-4 group-hover:text-slate-700 transition-colors duration-300">
+              <p className="text-sm text-slate-500 font-medium leading-relaxed line-clamp-4 group-hover:text-slate-700 transition-colors duration-300">
                 {concept.shortDefinition}
               </p>
           </div>
@@ -154,7 +154,7 @@ export const ConceptCard: React.FC<ConceptCardProps> = ({ concept, onClick, inde
                   <div className={`shrink-0 p-1 rounded bg-white shadow-sm border border-slate-100 ${colors.text} mt-0.5`}>
                      <Lightbulb className="w-3 h-3" strokeWidth={2.5} />
                   </div>
-                  <p className="text-[10px] font-semibold text-slate-700 leading-tight line-clamp-3 group-hover:text-slate-900 transition-colors flex-1">
+                  <p className="text-xs font-semibold text-slate-700 leading-tight line-clamp-3 group-hover:text-slate-900 transition-colors flex-1">
                      {concept.example}
                   </p>
                </div>
